@@ -22,20 +22,115 @@ if (isset($_POST['itemName'])) {
 $stones = mysqli_query($con, "SELECT * FROM item");
 $stones = $stones->fetch_all(MYSQLI_ASSOC);
 ?>
-<html><head><title></title>
+
+
+
+
+
+<html>
+<head>
+
+<!-- <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+ISSUES WITH RESPONSIVENESS FROM DB TABLE
+
+-->
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+
+
+body {
+
+	background: #f6f5f7;
+	display: overflow
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100%;
+	margin: -20px 0 50px;
+}
+
+h1 {
+	font-weight: bold;
+	margin: 0;
+}
+
+h2 {
+	text-align: center;
+}
+
+ p {
+	font-size: 10px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+
+.button {
+	border-radius: 5px;
+	border: 1px solid #FF4B2B;
+	background-color: #663399;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button:hover {
+	cursor: pointer;
+} */
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+				<img src="semiprecious-stones.jpg" width="100%", height="50%">
+    </div>
+
+
+<div style="width: 49%; text-align: right;">
+	<a href="/logout.php" class="button">Logout</a>
+</div>
+
+
+
+
+</header>
+
+
+
+
 
 <body>
-<!--<header>
-  <div style="height:50px; border-bottom: 1px solid #ccc;">
-    <div style="width: 49%; text-align: left;">
-      <a href="/index.php"><img src="https://via.placeholder.com/150x50.png" />
-    </div>
-    <div style="width: 49%; text-align: right;">
-      <a href="/logout.php">Logout</a>
-    </div>
-  </div>
-</header>
--->
 <div id="content">
   <table>
     <thead>
@@ -44,6 +139,7 @@ $stones = $stones->fetch_all(MYSQLI_ASSOC);
     </thead>
 
     <tbody>
+
   <?php
   foreach ($stones as $s) {
     ?>
@@ -67,4 +163,15 @@ $stones = $stones->fetch_all(MYSQLI_ASSOC);
     <input type="submit" value="Add Item" />
   </form>
 </body>
+
+<footer>
+	<a href="/logout.php" class="button">Logout</a>
+
+	<div style="width: 100%;border-bottom: 1px">
+      <!--<a href="/index.php">-->
+
+
+    </div>
+
+</footer>
 </html>
